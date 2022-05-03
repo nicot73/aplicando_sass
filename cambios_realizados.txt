@@ -1,0 +1,10 @@
+-Cree EXTEND en Mobile en las secciones de Informacion para reutilizar los comandos de FLEX.
+
+-Cree una Libreria de colores para el Menu de Productos y Aside.
+
+-Agregue MIXIN en Mobile en el pagina Visitanos al iframe de google maps.
+
+-Optimice Logo de todos los html, imagenes del carrusel e iconos.
+
+-SEO: Añadi keywords y descripciones en todos los html. Cambie Titulos de cada html.
+

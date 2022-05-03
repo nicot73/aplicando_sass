@@ -1,4 +1,10 @@
 // Responsive
+
+// Mixin
+@mixin tamanio($ancho, $alto) {
+    width: $ancho;
+    height: $alto;
+}
 /* Mobile First */
 /* Smartphone */
 @media (max-width: 480px) {
@@ -9,7 +15,7 @@
     header {
         a {
             text-decoration: none;
-            color: #fa7d09;
+            color: $atajoAbajo;
         }
         img {
             padding: 8px;
@@ -17,14 +23,14 @@
     }
     /* Menu */
     nav {
-        background-image: linear-gradient(to right, #1f1c2c, #434343);
+        background-image: $menuPrincipal;
         padding: 8px;
         border-radius: 3px;
         align-content: center;
-    }
-    a {
-        text-decoration: none;
-        color: #1b1a17;
+        a {
+            text-decoration: none;
+            color: #1b1a17;
+        }
     }
     ul {
         list-style-type: none;
@@ -39,40 +45,44 @@
     section {
         ul {
             li{
-                background-color: #ff4301;
+                background-color: $btnMenu;
                 max-width: 230px;
                 margin-bottom: 8px;
                 padding: 10px 25px;
                 border-radius: 3px;
                 align-self: center;
                 &:hover {
-                    border-left: solid 6px #9a9483;
-                    background-color: #fea82f;
+                    border-left: solid 6px $btnBorde;
+                    background-color: $btnSeleccion;
                     cursor: pointer;
                 }
             }
         }
     }
     /* Info */
-    .contactar {
+    .seccion-universal {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
+    }
+    .contactar {
+        @extend .seccion-universal;
         text-align: center;
         padding: 10px;
     }
     .visitar {
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
+        @extend .seccion-universal;
     }
     .horario {
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
+        @extend .seccion-universal;
     }
     /* Pie Pag */
-    footer{
+    .centrar-pie {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+    }
+    footer {
         img {
             padding-right: 8px;
             padding-left: 8px;
@@ -83,19 +93,22 @@
     aside {
         ul{
             li{
-                background-color: #FF4301;
+                background-color: $btnAside;
                 margin-left: 8px;
                 margin-bottom: 8px;
                 padding: 8px 18px;
                 border-radius: 3px;
                 width: 140px;
                 &:hover {
-                    border-left: solid 6px #9A9483;
-                    background-color: #FEA82F;
-                    color: #FF4301;
+                    border-left: solid 6px $btnBorde;
+                    background-color: $btnSeleccion;
                     cursor: pointer;
                 }
             }
+        }
+        a {
+            text-decoration: none;
+            color: #1b1a17;
         }
     }
     section {
@@ -111,8 +124,7 @@
     }
     /* Pag Visitanos */
     iframe {
-        width: 300px;
-        height: 450px;
+        @include tamanio(300px,450px )
     }
     /* Grid Areas */
     /* Index */
@@ -246,7 +258,7 @@
     header {
         a {
             text-decoration: none;
-            color: #fa7d09;
+            color: $atajoAbajo;
         }
         img {
             padding: 8px;
@@ -259,22 +271,23 @@
     }
     /* Menu */ 
     nav {
-        background-image: linear-gradient(to right, #1F1C2C, #434343);
+        background-image: $menuPrincipal;
         padding: 8px;
         border-radius: 3px;
         align-content: center;
-    }
-    a {
-        text-decoration: none;
-        color: #1B1A17;
+        a {
+            text-decoration: none;
+            color: #1b1a17;
+        }
     }
     ul {
+        list-style-type: none;
         li {
             margin-top: 6px;
             &:hover {
                 border-radius: 3px;
-                border-left: solid 6px #9A9483;
-                background-color: #FEA82F;
+                border-left: solid 6px $btnBorde;
+                background-color: $btnSeleccion;
                 cursor: pointer;
             }
         }
@@ -294,26 +307,19 @@
     section {
         ul {
             li {
-                background-color: #FF4301;
+                background-color: $btnMenu;
                 max-width: 230px;
                 margin-bottom: 8px;
                 padding: 10px 25px;
                 border-radius: 3px;
                 align-self: center;
                 &:hover {
-                    border-left: solid 6px #9A9483;
-                    background-color: #FEA82F;
+                    border-left: solid 6px $btnBorde;
+                    background-color: $btnSeleccion;
                     cursor: pointer;
                 }
             }
-        }
-        nav {
-            background-color: #4A3F35;
-            display: flex;
-            flex-flow: row wrap;
-            border-radius: 3px;
-            justify-content: space-around;
-        }
+        }  
     }
     /* Info */
     .info {
@@ -360,19 +366,22 @@
     aside {
         ul {
             li {
-                background-color: #FF4301;
+                background-color: $btnAside;
                 margin-left: 8px;
                 margin-bottom: 8px;
                 padding: 8px 20px;
                 border-radius: 3px;
                 width: 150px;
                 &:hover {
-                    border-left: solid 8px #9A9483;
-                    background-color: #FEA82F;
-                    color: #FF4301;
+                    border-left: solid 8px $btnBorde;
+                    background-color: $btnSeleccion;
                     cursor: pointer;
                 }
             }
+        }
+        a {
+            text-decoration: none;
+            color: #1b1a17;
         }
     }
     section {
@@ -520,7 +529,7 @@
     header {
         a {
             text-decoration: none;
-            color: #FA7D09;
+            color: $atajoAbajo;
         }
         img {
             padding: 8px;
@@ -533,15 +542,15 @@
     }
     /* Menu */
     nav {
-        background-image: linear-gradient(to right, #1F1C2C, #434343);
+        background-image: $menuPrincipal;
         padding: 8px;
         border-radius: 3px;
         align-content: center;
-    }
-    a {
-        text-decoration: none;
-        color: #1B1A17;
-    }
+        a {
+            text-decoration: none;
+            color: #1b1a17;
+        }
+    }  
     ul {
         list-style-type: none;
         li {
@@ -549,8 +558,8 @@
             padding: 2px 8px;
             &:hover {
                 border-radius: 3px;
-                border-left: solid 8px #9A9483;
-                background-color: #FEA82F;
+                border-left: solid 8px $btnBorde;
+                background-color: $btnSeleccion;
                 cursor: pointer;
             }
         }
@@ -574,21 +583,20 @@
     section {
         ul {
             li {
-                background-color: #FF4301;
+                background-color: $btnMenu;
                 margin-left: 8px;
                 padding: 10px 25px;
                 border-radius: 3px;
                 align-self: center;
                 &:hover {
-                    border-left: solid 8px #9A9483;
-                    background-color: #FEA82F;
+                    border-left: solid 8px $btnBorde;
+                    background-color: $btnSeleccion;
                     cursor: pointer;
                 }
             }
         }
         nav {
             max-width: 1400px;
-            background-color: #4A3F35;
             display: flex;
             flex-flow: row wrap;
             border-radius: 3px;
@@ -640,19 +648,22 @@
     aside {
         ul {
             li {
-                background-color: #FF4301;
+                background-color: $btnAside;
                 margin-left: 8px;
                 margin-bottom: 8px;
                 padding: 8px 20px;
                 border-radius: 3px;
                 width: 150px;
                 &:hover {
-                    border-left: solid 6px #9A9483;
-                    background-color: #FEA82F;
-                    color: #FF4301;
+                    border-left: solid 6px $btnBorde;
+                    background-color: $btnSeleccion;
                     cursor: pointer;
                 }
             }
+        }
+        a {
+            text-decoration: none;
+            color: #1b1a17;
         }
     }
     section {

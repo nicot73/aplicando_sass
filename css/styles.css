@@ -194,7 +194,7 @@ body {
 
 /* Fondo Pag Productos */
 .articulo {
-  background-image: url("../img/poligonos-neon.jpg");
+  background-image: linear-gradient(to right, #1f1c2c, #434343);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -284,8 +284,7 @@ body {
     border-radius: 3px;
     align-content: center;
   }
-
-  a {
+  nav a {
     text-decoration: none;
     color: #1b1a17;
   }
@@ -311,32 +310,29 @@ body {
   }
   section ul li:hover {
     border-left: solid 6px #9a9483;
-    background-color: #fea82f;
+    background-color: #Fea82f;
     cursor: pointer;
   }
 
   /* Info */
-  .contactar {
+  .seccion-universal, .horario, .visitar, .contactar {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+  }
+
+  .contactar {
     text-align: center;
     padding: 10px;
   }
 
-  .visitar {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-  }
-
-  .horario {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-  }
-
   /* Pie Pag */
+  .centrar-pie {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+
   footer img {
     padding-right: 8px;
     padding-left: 8px;
@@ -345,7 +341,7 @@ body {
 
   /* Pag Productos */
   aside ul li {
-    background-color: #FF4301;
+    background-color: #ff4301;
     margin-left: 8px;
     margin-bottom: 8px;
     padding: 8px 18px;
@@ -353,10 +349,13 @@ body {
     width: 140px;
   }
   aside ul li:hover {
-    border-left: solid 6px #9A9483;
-    background-color: #FEA82F;
-    color: #FF4301;
+    border-left: solid 6px #9a9483;
+    background-color: #Fea82f;
     cursor: pointer;
+  }
+  aside a {
+    text-decoration: none;
+    color: #1b1a17;
   }
 
   section article {
@@ -508,24 +507,26 @@ body {
 
   /* Menu */
   nav {
-    background-image: linear-gradient(to right, #1F1C2C, #434343);
+    background-image: linear-gradient(to right, #1f1c2c, #434343);
     padding: 8px;
     border-radius: 3px;
     align-content: center;
   }
-
-  a {
+  nav a {
     text-decoration: none;
-    color: #1B1A17;
+    color: #1b1a17;
   }
 
+  ul {
+    list-style-type: none;
+  }
   ul li {
     margin-top: 6px;
   }
   ul li:hover {
     border-radius: 3px;
-    border-left: solid 6px #9A9483;
-    background-color: #FEA82F;
+    border-left: solid 6px #9a9483;
+    background-color: #Fea82f;
     cursor: pointer;
   }
 
@@ -544,7 +545,7 @@ body {
   }
 
   section ul li {
-    background-color: #FF4301;
+    background-color: #ff4301;
     max-width: 230px;
     margin-bottom: 8px;
     padding: 10px 25px;
@@ -552,16 +553,9 @@ body {
     align-self: center;
   }
   section ul li:hover {
-    border-left: solid 6px #9A9483;
-    background-color: #FEA82F;
+    border-left: solid 6px #9a9483;
+    background-color: #Fea82f;
     cursor: pointer;
-  }
-  section nav {
-    background-color: #4A3F35;
-    display: flex;
-    flex-flow: row wrap;
-    border-radius: 3px;
-    justify-content: space-around;
   }
 
   /* Info */
@@ -611,7 +605,7 @@ body {
 
   /* Pag Productos */
   aside ul li {
-    background-color: #FF4301;
+    background-color: #ff4301;
     margin-left: 8px;
     margin-bottom: 8px;
     padding: 8px 20px;
@@ -619,10 +613,13 @@ body {
     width: 150px;
   }
   aside ul li:hover {
-    border-left: solid 8px #9A9483;
-    background-color: #FEA82F;
-    color: #FF4301;
+    border-left: solid 8px #9a9483;
+    background-color: #Fea82f;
     cursor: pointer;
+  }
+  aside a {
+    text-decoration: none;
+    color: #1b1a17;
   }
 
   section article {
@@ -757,7 +754,7 @@ body {
   /* Encabezado */
   header a {
     text-decoration: none;
-    color: #FA7D09;
+    color: #fa7d09;
   }
   header img {
     padding: 8px;
@@ -771,15 +768,14 @@ body {
 
   /* Menu */
   nav {
-    background-image: linear-gradient(to right, #1F1C2C, #434343);
+    background-image: linear-gradient(to right, #1f1c2c, #434343);
     padding: 8px;
     border-radius: 3px;
     align-content: center;
   }
-
-  a {
+  nav a {
     text-decoration: none;
-    color: #1B1A17;
+    color: #1b1a17;
   }
 
   ul {
@@ -791,8 +787,8 @@ body {
   }
   ul li:hover {
     border-radius: 3px;
-    border-left: solid 8px #9A9483;
-    background-color: #FEA82F;
+    border-left: solid 8px #9a9483;
+    background-color: #Fea82f;
     cursor: pointer;
   }
 
@@ -816,20 +812,19 @@ body {
   }
 
   section ul li {
-    background-color: #FF4301;
+    background-color: #ff4301;
     margin-left: 8px;
     padding: 10px 25px;
     border-radius: 3px;
     align-self: center;
   }
   section ul li:hover {
-    border-left: solid 8px #9A9483;
-    background-color: #FEA82F;
+    border-left: solid 8px #9a9483;
+    background-color: #Fea82f;
     cursor: pointer;
   }
   section nav {
     max-width: 1400px;
-    background-color: #4A3F35;
     display: flex;
     flex-flow: row wrap;
     border-radius: 3px;
@@ -883,7 +878,7 @@ body {
 
   /* Pag Productos */
   aside ul li {
-    background-color: #FF4301;
+    background-color: #ff4301;
     margin-left: 8px;
     margin-bottom: 8px;
     padding: 8px 20px;
@@ -891,10 +886,13 @@ body {
     width: 150px;
   }
   aside ul li:hover {
-    border-left: solid 6px #9A9483;
-    background-color: #FEA82F;
-    color: #FF4301;
+    border-left: solid 6px #9a9483;
+    background-color: #Fea82f;
     cursor: pointer;
+  }
+  aside a {
+    text-decoration: none;
+    color: #1b1a17;
   }
 
   section article {
